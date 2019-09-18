@@ -57,12 +57,16 @@ private heroes: Heroe[] = [
   ];
 
     constructor() {
-        console.log('servicio lista para utilizar');
+        console.log('servicio listo para utilizar');
     }
 
     getHeroes(): Heroe[] {
         return this.heroes;
     }
+
+    getHeroe(idx: string): Heroe[] {
+      return this.heroes[idx];
+  }
 }
 
 export interface Heroe {
