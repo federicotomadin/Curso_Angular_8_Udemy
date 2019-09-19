@@ -1,5 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+
+import { AngularFirestore } from '@angular/fire/firestore';
 
 // Rutas
 import { APP_ROUTING } from './app.routes';
@@ -29,9 +33,10 @@ import { HeroeComponent } from './components/heroe/heroe.component';
   ],
   imports: [
     BrowserModule,
+    AngularFireModule.initializeApp(environment.firebase),
     APP_ROUTING
   ],
-  providers: [HeroesService],
+  providers: [HeroesService, AngularFirestore],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

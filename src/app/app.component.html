@@ -1,9 +1,13 @@
 <app-navbar></app-navbar>
 
+<ul>
+    <li *ngFor="let item of items | async">
+      {{ item.Apellido }}
+    </li>
+  </ul>
+
 <div class="container main-container">
 
     <router-outlet></router-outlet>
-
-
 
 </div>
